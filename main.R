@@ -1,0 +1,18 @@
+source("getDates.R")
+source("plot1.R")
+source("plot2.R")
+
+consumption <- GetConsumptionInDates(as.Date(c("2007-02-01", "2007-02-02")))
+
+plot1(consumption)
+dev.copy(png, file="plot1.png")
+dev.off()
+plot2(consumption)
+dev.copy(png, file="plot2.png")
+dev.off()
+plot3(consumption)
+dev.copy(png, file="plot3.png")
+dev.off()
+plot4(consumption)
+dev.copy(png, file="plot4.png")
+dev.off()
